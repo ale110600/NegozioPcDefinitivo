@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>680</y>
+      <w>400</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Pc
+--
+-identificativo:int
+-nome:String  
+-quantitaDisponibile:int
+--
++Pc(in Identificativo:int,in Nome:String,in QuantitaDisponibile:int)
+Pc(in p:Pc)
++Pc()
++getIdentificativo():int
++setIdentificativo(in identificativo:int)
++getNome():String
++setNome(in nome:String)
++getQuantitaDisponibile():int
++setQuantitaDisponibile(in quantitaDisponibile:int)
++toString():String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>380</y>
+      <w>400</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>ListaPc
+--
+-head:Nodo
+-elementi:int
+--
++ListaPc()
++getElementi():int
+-creaNodo(in pc:Pc,link:Nodo)Nodo
+-getLinkPosizione(in posizione:int )Nodo 
++InserisciComputer(in pc:Pc)
++eliminaComputerNome(in nomeFile:String)
++eliminaComputerId(in nomeFile:String)
++vendi():int
++acquista():int
++getPc(in posizione:int):Pc
++convertiListaPc():ListaPc[]
++convertiPc(in pc:Pc[])
++scambia(in array:Pc[],pos1:int,pos2:int):int
++copiaArray(in array:Pc[]):Pc[]
++ordinaPcPerQuantitaDisponbile(in array:Pc[]):Pc[]
++ordinaPcPerOrdineAlfabetico(in array:Pc[]):Pc[]
++visualizzaPcQuantitaInferiore():String
++toString():String
++caricaListaPc(in nameFile:String):ListaPc
++salvaListaPc(in nameFile:String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>390</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Nodo
+--
+-info:Pc
+-link:Nodo
+--
++Nodo
++setInfo(in pc:Pc)
++getInfo(in pc:Pc)
++setLink(in link:Nodo)
++getLink():Nodo</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>430</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0;120.0;70.0;70.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>490</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>540</y>
+      <w>30</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>610</y>
+      <w>50</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>450</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>450</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
